@@ -1,0 +1,133 @@
+/* Body & General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background-color: #004080;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+/* Welcome Banner */
+#welcomeBanner {
+    background: #a0e7e5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #00b4d8;
+}
+
+.highlight {
+    background-color: #ffdd57;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffffdd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Images */
+.event-img {
+    border: 3px solid #008080;
+    border-radius: 8px;
+    width: 150px;
+    height: 100px;
+    transition: transform 0.5s;
+}
+
+.event-img:hover {
+    transform: scale(1.1);
+}
+
+/* Forms */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #004c99;
+}
+
+/* Event Fee and Char Count */
+#eventFee, #charCount, #videoStatus {
+    font-weight: bold;
+    color: #004080;
+}
+
+/* Video */
+video {
+    border: 4px solid #005f73;
+    border-radius: 10px;
+}
+
+/* Geolocation Button */
+button {
+    background-color: #38b000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a9d8f;
+}
+
+/* Footer */
+footer {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}

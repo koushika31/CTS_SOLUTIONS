@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Welcome -->
+    <div id="welcomeBanner">
+        <h2>Welcome, <span class="highlight">Community Member!</span></h2>
+        <p><span style="color:red; font-weight:bold;">Special Offer:</span> Get early tickets now!</p>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h3>About the Portal</h3>
+            <p>This portal connects you with all the events happening in your community.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h3>Upcoming Community Events</h3>
+            <table id="eventsTable">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Seats Available</th>
+                        <th>Image</th>
+                        <th>Register</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section (Registration Form) -->
+        <section id="contact">
+            <h3>Event Registration</h3>
+            <form id="registrationForm" onsubmit="submitRegistration(event)">
+                <label>Name: <input type="text" name="name" placeholder="Your Name" required autofocus /></label><br /><br />
+                <label>Email: <input type="email" name="email" placeholder="Your Email" required /></label><br /><br />
+                <label>Date: <input type="date" name="date" required /></label><br /><br />
+                <label>Event Type:
+                    <select id="eventType" name="eventType" onchange="showFee(); savePreferences();" required>
+                        <option value="">Select...</option>
+                        <option value="musicfest">Music Fest</option>
+                        <option value="artfair">Art Fair</option>
+                        <option value="foodcarnival">Food Carnival</option>
+                        <option value="yogaday">Yoga Day</option>
+                        <option value="techworkshop">Tech Workshop</option>
+                        <option value="bookfest">Book Fest</option>
+                    </select>
+                </label><br /><br />
+                <div id="eventFee" class="highlight"></div><br />
+                <label>Phone: <input type="text" id="phone" onblur="validatePhone()" required /></label><br /><br />
+                <label>Message:<br />
+                    <textarea id="feedback" rows="4" cols="30" onkeyup="countChars()"></textarea>
+                </label><br />
+                <div id="charCount">Characters: 0</div><br />
+                <button type="submit">Submit</button>
+                <button type="button" onclick="clearPreferences()">Clear Preferences</button><br /><br />
+                <output id="outputMsg"></output>
+            </form>
+        </section>
+
+        <!-- Video Section -->
+        <section>
+            <h3>Event Promo Video</h3>
+            <video width="320" height="240" controls oncanplay="videoReady()">
+                <source src="promo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <p id="videoStatus" class="highlight"></p>
+        </section>
+
+        <!-- Geolocation -->
+        <section>
+            <h3>Find Nearby Events</h3>
+            <button onclick="findLocation()">Find Nearby Events</button>
+            <p id="geoResult"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

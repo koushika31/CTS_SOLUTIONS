@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch BasicJDBCExample",
+      "request": "launch",
+      "mainClass": "BasicJDBCExample",
+      "classpath": [
+        "D:/K/java/solutions",
+        "D:/K/java/solutions/sqlite-jdbc-3.49.1.0.jar"
+      ]
+    }
+  ]
+}
